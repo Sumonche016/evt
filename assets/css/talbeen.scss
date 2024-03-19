@@ -1,0 +1,115 @@
+@mixin respond-phone {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+
+html {
+  @include respond-phone {
+    font-size: 13px;
+  }
+}
+.talbeen-singlepage-wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/talbeen/talbeenBg.png);
+}
+
+.singlepage-wrapper {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 800px) {
+  .singlepage-wrapper {
+    height: 100%;
+  }
+}
+.text-muted {
+  color: white !important;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+}
+
+.singlepage-image {
+  width: 65%;
+}
+
+.singlepage-ticket {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+  .singlepage-ticket {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .singlepage-image {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.btn-lg-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .btn-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+
+.btn-lg {
+  margin: 1.5rem 0 0.5rem !important;
+}
+
+.description ul li {
+  font-size: 1rem;
+}
+
+.people {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+
+  figure {
+    font-size: 0.9rem;
+  }
+}
+
+.overlay-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  padding: 2rem 0 5rem;
+  @include respond-phone() {
+    padding: 0 10%;
+  }
+}
+
+.Content {
+  @include respond-phone {
+    height: unset;
+  }
+}
